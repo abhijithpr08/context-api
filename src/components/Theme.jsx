@@ -1,9 +1,16 @@
 import React from 'react'
 
 const ThemeContext = React.createContext("light")
+
+const Toolbar =()=>{
+  return <div>Tool bar component</div>
+}
+
 const Theme = () => {
   return (
-    <div>Theme Context Created</div>
+    <ThemeContext.Provider value='dark'>
+      <Toolbar/>
+    </ThemeContext.Provider>
   )
 }
 
