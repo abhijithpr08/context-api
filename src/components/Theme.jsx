@@ -1,9 +1,10 @@
-import React from 'react'
+import React, { useContext } from 'react'
 
 const ThemeContext = React.createContext("light")
 
 const Toolbar =()=>{
-  return <div>Tool bar component</div>
+  const theme = useContext(ThemeContext) 
+  return <div>Theme : {theme}</div>
 }
 
 const Theme = () => {
